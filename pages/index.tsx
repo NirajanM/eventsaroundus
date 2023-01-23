@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Image from 'next/image';
 export default function Home({ heading, events }) {
-  console.log(events.events_categories);
   return (
     <>
       <Head>
@@ -20,7 +19,7 @@ export default function Home({ heading, events }) {
       </header>
 
       <main className={styles.main}>
-        {events.events_categories.map((ev) => {
+        {events.map((ev) => {
           return (<a key={ev.id} href={`/events/${ev.id}`}>
             <Image alt={ev.title} src={ev.image} width={400} height={400} />
             <h2>{ev.title}</h2>
@@ -41,12 +40,12 @@ export default function Home({ heading, events }) {
 //this function only runs on serverside so we can even have secret keys in this function below
 // + this function runs before client side components
 export async function getServerSideProps() {
-  const { events_categories } = await import("../data/data.json");
+  const { events_categories } = await import("/data/data.json");
   return (
     {
       props: {
         heading: "Hey, this text came from a function through props!",
-        events: { events_categories },
+        events: events_categories,
       },
     }
   );
