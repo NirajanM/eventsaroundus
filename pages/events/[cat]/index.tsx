@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function EventsCatPage({ data, cityName }) {
     return (
         <div>
@@ -6,11 +7,11 @@ export default function EventsCatPage({ data, cityName }) {
             {
                 data.map(d => {
                     return (
-                        <a key={d.id} href={`/events/${d.city}/${d.id}`}>
+                        <Link key={d.id} href={`/events/${d.city}/${d.id}`}>
                             <Image alt={d.title} src={d.image} width={400} height={400} />
                             <h2>{d.title}</h2>
                             <p>{d.description}</p>
-                        </a>
+                        </Link>
                     )
                 })
             }

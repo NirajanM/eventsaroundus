@@ -1,14 +1,15 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 export default function EventsPage({ events }) {
     return (
         <div>
             <h1>Events Page</h1>
             {events.map((ev) => {
-                return (<a key={ev.id} href={`/events/${ev.id}`}>
+                return (<Link key={ev.id} href={`/events/${ev.id}`}>
                     <Image alt={ev.title} src={ev.image} width={400} height={400} />
                     <h2>{ev.title}</h2>
-                </a>);
+                </Link>);
             })}
         </div>
     )
