@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function SingleEvent({ data }) {
     return (
-        <div>
-            <Image alt={data.title} src={data.image} width={400} height={400} />
-            <h2>{data.title}</h2>
+        <div className="p-2 mb-40 text-left max-w-5xl flex flex-col items-left justify-center">
+            <Image alt={data.title} src={data.image} width={600} height={400} />
+            <h2 className="text-3xl font-bold">{data.title}</h2>
             <p>{data.description}</p>
         </div>
 

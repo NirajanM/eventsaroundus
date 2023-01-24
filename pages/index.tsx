@@ -11,7 +11,7 @@ export default function Home({ events }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center gap-20">
+      <main className="flex min-h-screen flex-col items-center gap-20 p-4">
         {events.map((ev) => {
           return (<Link key={ev.id} href={`/events/${ev.id}`} className="flex md:flex-row flex-col max-w-5xl w-full even:flex-col even:md:flex-row-reverse gap-8">
             <Image alt={ev.title} src={ev.image} width={300} height={100} className="rounded-md" />

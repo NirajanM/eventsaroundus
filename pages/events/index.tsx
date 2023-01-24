@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 export default function EventsPage({ events }) {
     return (
-        <div className='flex justify-center items-center min-w-screen flex-col'>
+        <div className='flex justify-center items-center min-w-screen flex-col p-4'>
             <h1 className='text-3xl font-black my-8 text-slate-400'>Check out, currently happening events:</h1>
             <div className='flex gap-4 flex-col md:flex-row'>
                 {events.map((ev) => {

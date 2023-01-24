@@ -1,7 +1,7 @@
 
 export default function Footer() {
     return (
-        <footer className="py-8 bg-slate-900 mt-16 text-white">
+        <footer className="py-8 px-1 bg-slate-900 mt-16 text-white">
             <div>
                 &copy; {new Date().getFullYear()} all rights reserved
             </div>
