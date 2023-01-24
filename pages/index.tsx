@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home({ heading, events }) {
+export default function Home({ events }) {
   return (
     <>
       <Head>
@@ -12,24 +11,10 @@ export default function Home({ heading, events }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
-          <Link href="/">
-            Home
-          </Link>
-          <Link href="/events">
-            Events
-          </Link>
-          <Link href="/about-us">
-            About Us
-          </Link>
-        </nav>
-      </header>
-
       <main className="flex min-h-screen flex-col items-center gap-20">
         {events.map((ev) => {
-          return (<Link key={ev.id} href={`/events/${ev.id}`} className="flex max-w-5xl even:flex-row-reverse gap-8">
-            <Image alt={ev.title} src={ev.image} width={400} height={400} className="h-80 rounded-md" />
+          return (<Link key={ev.id} href={`/events/${ev.id}`} className="flex md:flex-row flex-col max-w-5xl w-full even:flex-col even:md:flex-row-reverse gap-8">
+            <Image alt={ev.title} src={ev.image} width={300} height={100} className="rounded-md" />
             <div className='flex justify-center gap-4 flex-col'>
               <h2 className='text-3xl font-black'>{ev.title}</h2>
               <p>{ev.description}</p>
@@ -37,12 +22,6 @@ export default function Home({ heading, events }) {
           </Link>);
         })}
       </main>
-      <footer>
-        <div>
-          &copy; {new Date().getFullYear()} all rights reserved
-        </div>
-        {heading}
-      </footer>
     </>
   )
 }
