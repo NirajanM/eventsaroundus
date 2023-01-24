@@ -3,14 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 export default function EventsPage({ events }) {
     return (
-        <div>
-            <h1>Events Page</h1>
-            {events.map((ev) => {
-                return (<Link key={ev.id} href={`/events/${ev.id}`}>
-                    <Image alt={ev.title} src={ev.image} width={400} height={400} />
-                    <h2>{ev.title}</h2>
-                </Link>);
-            })}
+        <div className='flex justify-center items-center min-w-screen flex-col'>
+            <h1 className='text-3xl font-black my-8 text-slate-400'>Check out, currently happening events:</h1>
+            <div className='flex gap-4 flex-col md:flex-row'>
+                {events.map((ev) => {
+                    return (<Link key={ev.id} href={`/events/${ev.id}`} className="relative">
+                        <Image alt={ev.title} src={ev.image} width={400} height={400} className=" h-80 rounded-md" />
+                        <h2 className='absolute bottom-4 text-5xl font-black text-slate-100/90 shadow-xl px-4'>{ev.title}</h2>
+                    </Link>);
+                })}
+            </div>
         </div>
     )
 }

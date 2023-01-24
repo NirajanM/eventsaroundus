@@ -2,16 +2,17 @@ import React from 'react'
 
 export default function AboutUs() {
     return (
-        <div>
-            <h1>About Us:</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe tempora molestiae hic, quae impedit accusamus, ipsa quos consequuntur odio, dolores repudiandae minima. Ut explicabo nostrum unde iusto cum ullam.
-                Eum cum nihil officia enim corrupti quia veniam laboriosam dicta vel vitae cupiditate temporibus non, perspiciatis, consectetur, eius libero facilis ex excepturi eligendi laudantium. Iste molestias error eligendi veritatis dicta!
-                Minus laboriosam excepturi facilis molestias obcaecati saepe exercitationem, incidunt, aut molestiae iure commodi iste nemo vitae. Optio, ducimus rerum temporibus enim, ipsum iure voluptatum, aliquam pariatur laudantium excepturi dolor reprehenderit?
-                Aspernatur id, eos magnam voluptates mollitia accusamus commodi deleniti animi? Minus totam, voluptatibus, architecto sapiente atque aut hic voluptatum velit vitae earum obcaecati assumenda. Aspernatur dicta facilis laborum totam iste.
-                Sunt unde voluptas sapiente expedita amet provident natus error facere reprehenderit, aut accusamus totam tempora libero iste dolorem quas voluptates saepe quod perferendis ea! Doloremque dicta aut quidem sed sequi.
-                Ut rem velit, reprehenderit tempore voluptates, tempora itaque perspiciatis odit dolores, eum in necessitatibus maiores molestias et eligendi quam non? Pariatur vel itaque incidunt iusto nesciunt natus expedita esse corrupti.
-                Debitis rem molestiae incidunt officiis deleniti! Nobis numquam repudiandae enim accusamus, ipsam tempora voluptatem aspernatur asperiores nam nesciunt suscipit pariatur qui maiores dolorem libero laboriosam omnis magni laborum ea cupiditate.
-                Nihil sint culpa doloremque incidunt provident odio veniam! Deleniti tempora non quasi ipsa consequatur provident in numquam labore dolore eos! Vel provident in, quibusdam veritatis et voluptatem impedit sint rem.</p>
+        <div className='text-left p-8'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores nobis velit, tenetur nemo repellat magnam, autem in asperiores architecto unde eum consequatur labore ratione nesciunt ab cumque dolores quam?
+            Neque delectus quam vel laboriosam. Necessitatibus maxime incidunt nostrum atque ab eligendi aut consectetur eum aspernatur, fuga facere similique nesciunt tenetur illo, id in vel? Consequuntur nulla explicabo cumque iste.
+            Reprehenderit quisquam explicabo cupiditate est fugit repudiandae asperiores, temporibus tempore at possimus velit officiis, perferendis nisi accusamus qui rerum quia. Aliquid totam debitis, ullam obcaecati dolore vero illo maxime perspiciatis?
+            Esse ab est numquam, nihil blanditiis nesciunt vel earum aliquam porro corrupti at! Rerum provident enim est delectus aliquid aut quae, reprehenderit tenetur adipisci velit assumenda sint labore ullam reiciendis.
+            Autem magnam aperiam delectus porro ut! Nulla rerum excepturi eaque optio, inventore nostrum impedit debitis tenetur quasi dolorum mollitia quibusdam quaerat labore! Quas nulla fugiat deserunt nisi nostrum, dolor cupiditate.
+            Debitis magnam totam nobis laudantium eius suscipit esse in fugiat aliquid repudiandae eveniet consequuntur quis, non asperiores ducimus, vel pariatur! Incidunt obcaecati temporibus dolorum amet accusamus totam ea magnam officiis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, delectus odit nihil animi voluptas possimus doloremque cupiditate sint quaerat deleniti commodi modi amet veniam ab alias quisquam id autem voluptatem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nostrum maxime eaque nesciunt, pariatur doloremque temporibus tempora magni fugiat optio omnis obcaecati cumque quibusdam beatae voluptate adipisci quam consequatur tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga nemo sunt dicta cumque quia, possimus suscipit minus aperiam sed quis ullam voluptatum adipisci, reprehenderit molestiae pariatur. Consequatur, explicabo unde!Sapiente minima tempora dolor praesentium culpa omnis vero ad voluptatem deserunt blanditiis harum sit ipsam enim rerum incidunt, neque ducimus nam debitis, nemo doloribus quo impedit ea! Sunt, et explicabo?Maiores totam quam dolore sint porro blanditiis deleniti praesentium corrupti nesciunt doloremque nobis dignissimos eaque officiis iure illo repudiandae voluptas, aliquid incidunt minus architecto! Quo ullam officia perferendis sequi expedita.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum impedit eaque, labore, eum repudiandae a voluptates, ad molestias nulla debitis ex molestiae consequuntur accusamus cupiditate veritatis sit ipsam. Vitae, sunt?
+            Saepe soluta neque ex, nisi tempora quaerat. Magni, quo in mollitia aliquid molestiae consequatur, perferendis pariatur provident temporibus vitae nesciunt fugiat tempore exercitationem consectetur, enim cum incidunt vero odio numquam?
+
         </div>
     )
 }
