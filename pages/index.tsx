@@ -26,12 +26,14 @@ export default function Home({ heading, events }) {
         </nav>
       </header>
 
-      <main className={styles.main}>
+      <main className="flex min-h-screen flex-col items-center gap-20">
         {events.map((ev) => {
-          return (<Link key={ev.id} href={`/events/${ev.id}`}>
-            <Image alt={ev.title} src={ev.image} width={400} height={400} />
-            <h2>{ev.title}</h2>
-            <p>{ev.description}</p>
+          return (<Link key={ev.id} href={`/events/${ev.id}`} className="flex max-w-5xl even:flex-row-reverse gap-8">
+            <Image alt={ev.title} src={ev.image} width={400} height={400} className="h-80 rounded-md" />
+            <div className='flex justify-center gap-4 flex-col'>
+              <h2 className='text-3xl font-black'>{ev.title}</h2>
+              <p>{ev.description}</p>
+            </div>
           </Link>);
         })}
       </main>

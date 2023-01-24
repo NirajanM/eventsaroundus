@@ -105,3 +105,7 @@ header nav {
   align-items: center;
   gap: 8px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
