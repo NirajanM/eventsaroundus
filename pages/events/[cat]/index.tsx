@@ -44,7 +44,6 @@ export async function getStaticProps(context) {
     const data = allEvents.filter(ev => {
         return (ev.city === id)
     }) // this will return match of current params that user browse (subroute) with city value from allEvents array in data.json
-    console.log(data)
     return (
         {
             props: { data, cityName: id }
