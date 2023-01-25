@@ -4,13 +4,38 @@ import { useRef, useState } from "react";
 
 export default function SingleEvent({ data }) {
     const email = useRef("");
+    const [color, setColor] = useState(true);
     const route = useRouter();
     const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
         const userEmail = email.current.value;
         const currentRoute = route.query.singleEvent;
-        console.log(userEmail, currentRoute)
+        const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        if (!userEmail.match(validRegex)) {
+            setMessage('Email format is invalid');
+            setColor(true);
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/email-registration', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: userEmail, eventId: currentRoute }),
+            });
+
+            if (!response.ok) throw new Error(`Error: ${response.status}`);
+            const data = await response.json();
+            setMessage(data.message);
+            setColor(false);
+            email.current.value = '';
+        } catch (e) {
+            console.log('ERROR', e);
+        }
     }
     return (
         <div className="flex justify-center">
@@ -25,10 +50,11 @@ export default function SingleEvent({ data }) {
                     className="flex flex-col items-center"
                 >
                     <label className="mt-4">Register for this event:</label>
-                    <input ref={email} placeholder="Your email address" className="px-2 py-1 text-center my-2" /><button
+                    <input ref={email} onChange={() => { setMessage("") }} placeholder="Your email address" className="px-2 py-1 text-center my-2" /><button
                         type="submit"
                         className="py-2 px-4 bg-blue-500/40 rounded-xl mt-4 hover:bg-blue-500/80"
                     >submit</button>
+                    <span className={(color) ? "text-red-400/60" : "text-green-400/60"}>{message}</span>
                 </form>
             </div>
         </div>
